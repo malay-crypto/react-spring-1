@@ -29,7 +29,7 @@ let Home=()=>{
 
                    // await axios.delete("http://localhost:8080/delete/"+item.id)
 
-        await axios.delete("https://spring-boot-1-u2qc.onrender.com/"+item.id)
+        await axios.delete("https://spring-boot-1-u2qc.onrender.com/delete/"+item.id)
 
         //https://spring-boot-1-u2qc.onrender.com
                 toast.success("Product deleted successfully")
