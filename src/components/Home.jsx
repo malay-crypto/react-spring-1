@@ -27,7 +27,11 @@ let Home=()=>{
 
     let deleteProduct=async (item)=>{
 
-                    await axios.delete("http://localhost:8080/delete/"+item.id)
+                   // await axios.delete("http://localhost:8080/delete/"+item.id)
+
+        await axios.delete("https://spring-boot-1-u2qc.onrender.com/"+item.id)
+
+        //https://spring-boot-1-u2qc.onrender.com
                 toast.success("Product deleted successfully")
                dispatch(fetchProducts())
     }
@@ -58,7 +62,9 @@ let Home=()=>{
                                         <CardMedia
                                             component="img"
 
-                                            image={`http://localhost:8080/upload/${item.imageName}`}
+                                           // image={`http://localhost:8080/upload/${item.imageName}`}
+                                            image={`https://spring-boot-1-u2qc.onrender.com/upload/${item.imageName}`}
+                                            //https://spring-boot-1-u2qc.onrender.com
                                             alt="not available"
                                             sx={{
                                                 objectFit:"contain",

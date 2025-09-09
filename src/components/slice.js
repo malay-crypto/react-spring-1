@@ -4,7 +4,11 @@ import axios from "axios";
 let fetchProducts=createAsyncThunk('prod',async ()=>{
 
     console.log("async thunk ...fetchProducts called")
-    let r=await axios.get("http://localhost:8080/")
+    //let r=await axios.get("http://localhost:8080/")
+
+    let r=await axios.get("https://spring-boot-1-u2qc.onrender.com/")
+
+    //https://spring-boot-1-u2qc.onrender.com
     return r.data
 
 })

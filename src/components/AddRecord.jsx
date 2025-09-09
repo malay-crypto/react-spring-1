@@ -29,7 +29,11 @@ let AddRecord=()=>{
              let headers={
                  'content-type': 'multipart/form-data',
              }
-             await axios.post("http://localhost:8080/add",fd,{headers});
+            // await axios.post("http://localhost:8080/add",fd,{headers});
+
+             await axios.post("https://spring-boot-1-u2qc.onrender.com/add",fd,{headers});
+
+             //https://spring-boot-1-u2qc.onrender.com
              toast.success("Add Record Successfully!");
              setObj({name:"", category:'',price:'',image:''});
 
@@ -49,7 +53,11 @@ let AddRecord=()=>{
              let headers={
                  'content-type': 'multipart/form-data',
              }
-             await axios.put("http://localhost:8080/edit",fd,{headers});
+             //await axios.put("http://localhost:8080/edit",fd,{headers});
+
+             await axios.put("https://spring-boot-1-u2qc.onrender.com/edit",fd,{headers});
+
+             //https://spring-boot-1-u2qc.onrender.com
              toast.success("Record  modified Successfully!");
              setObj({name:"", category:'',price:'',image:''});
 
